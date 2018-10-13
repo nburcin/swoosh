@@ -14,6 +14,11 @@ class LeagueVC: UIViewController {
     
     @IBOutlet weak var nextBtn: BorderButton!
     
+    @IBOutlet weak var mensBtn: BorderButton!
+    
+    @IBOutlet weak var womensBtn: BorderButton!
+    
+    @IBOutlet weak var coedBtn: BorderButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +42,8 @@ class LeagueVC: UIViewController {
     func selectLeague(leagueType: String) {
         player.desiredLeague = leagueType
         nextBtn.isEnabled = true
+        mensBtn.alpha = 0.8
+        womensBtn.backgroundColor = UIColor.white
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
